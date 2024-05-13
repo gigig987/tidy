@@ -38,6 +38,7 @@
 		"@tsconfig/svelte": "^5.0.2",
 		"@types/chroma-js": "^2.4.4",
 		"@types/node": "^20.10.5",
+		"chroma-js": "^2.4.2",
 		"concurrently": "^8.2.2",
 		"d3-color": "^3.1.0",
 		"svelte": "^4.2.15",
