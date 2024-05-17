@@ -1,8 +1,9 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import { viteSingleFile } from 'vite-plugin-singlefile';
-import writeFigmaManifest from './scripts/write-figma-manifest';
+
 import figmaManifest from './figma.manifest';
+import writeFigmaManifest from './scripts/write-figma-manifest';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,12 @@ export default defineConfig({
 			entry: path.resolve(__dirname, './src/plugin/plugin.ts'),
 			fileName: 'plugin',
 			formats: ['es'],
+		},
+		rollupOptions: {
+			output: {
+				entryFileNames: 'index.js',
+				extend: true,
+			},
 		},
 		emptyOutDir: false,
 		outDir: path.resolve(__dirname, './dist'),
